@@ -26,10 +26,10 @@ if __name__ == '__main__':
     wechatPush.put_send_data(keys=["meet_days"],
                              values=[api.get_meet_days()],
                              colors=[Color.Teal])
-
-    wechatPush.put_send_data(keys=['birthdays', "video"],
-                             values=[api.get_birthdays_message(), api.get_chasing_drama()],
-                             colors=[Color.Grape, Color.Pink])
+    # 你没有配置追剧， 就把这个功能删掉
+    wechatPush.put_send_data(keys=['birthdays'],
+                             values=[api.get_birthdays_message()],
+                             colors=[Color.Grape])
 
     wechatPush.put_send_data(keys=["note"],
                              values=[api.get_everyday_note()],
